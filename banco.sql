@@ -11,4 +11,6 @@ create table aluno (
 Insert into aluno (nome, idade) values ('João', 20);
 Insert into aluno (nome, idade) values ('Maria', 22);  
 Insert into aluno (nome, idade) values ('Pedro', 19);
-
+Insert into aluno (nome, idade) values ('João1', 22);
+Insert into aluno (nome, idade) values ('Maria1', 21);  
+Insert into aluno (nome, idade) values ('Pedro1', 18);
