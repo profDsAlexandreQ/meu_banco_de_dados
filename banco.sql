@@ -23,6 +23,7 @@ CREATE TABLE professor_curso (
     id_professor INT,
     id_curso INT,
     PRIMARY KEY (id_professor, id_curso),
+    
     FOREIGN KEY (id_professor) REFERENCES professor(id),
     FOREIGN KEY (id_curso) REFERENCES curso(id)
 );
