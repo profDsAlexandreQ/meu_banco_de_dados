@@ -9,7 +9,7 @@ create table aluno (
 );
 CREATE TABLE curso (
     id int PRIMARY KEY AUTO_INCREMENT,
-    curso_name VARCHAR(50),
+    curso_name VARCHAR(50)
 );
 CREATE TABLE professor (
     id INT PRIMARY KEY AUTO_INCREMENT,
