@@ -4,8 +4,8 @@ USE escola;
 
 CREATE TABLE aluno (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome varchar(255) NOT NULL,
-    idade int NOT NULL    
+    nome VARCHAR(255) NOT NULL,
+    idade INT NOT NULL    
 );
 CREATE TABLE curso (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -22,7 +22,6 @@ CREATE TABLE professor_curso (
     FOREIGN KEY (id_professor) REFERENCES professor(id),
     FOREIGN KEY (id_curso) REFERENCES curso(id)
 );
-
 INSERT INTO aluno (nome, idade) VALUES ('João', 20);
 INSERT INTO aluno (nome, idade) VALUES ('Maria', 22);  
 INSERT INTO aluno (nome, idade) VALUES ('Pedro', 19);
