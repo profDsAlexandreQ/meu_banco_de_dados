@@ -2,20 +2,20 @@ CREATE DATABASE escola;
 
 USE escola;
 
-CREATE TABLE aluno (
+CREATE TABLE aluno(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     idade INT NOT NULL    
 );
-CREATE TABLE curso (
+CREATE TABLE curso(
     id INT PRIMARY KEY AUTO_INCREMENT,
     curso_name VARCHAR(50)
 );
-CREATE TABLE professor (
+CREATE TABLE professor(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR (100)
+    nome VARCHAR(100)
 );
-CREATE TABLE professor_curso (
+CREATE TABLE professor_curso(
     id_professor INT,
     id_curso INT,
     PRIMARY KEY (id_professor, id_curso),
