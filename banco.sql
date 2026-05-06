@@ -11,8 +11,12 @@ CREATE TABLE curso (
     id int PRIMARY KEY AUTO_INCREMENT,
     curso_name VARCHAR(50),
 );
+CREATE TABLE professor (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR (100)
+);
 
-Insert into aluno (nome, idade) values ('João', 20);
+Insert into aluno (nome, idade) values ('João, 20);
 Insert into aluno (nome, idade) values ('Maria', 22);  
 Insert into aluno (nome, idade) values ('Pedro', 19);
 Insert into aluno (nome, idade) values ('João1', 22);
