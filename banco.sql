@@ -1,27 +1,34 @@
-Create database escola;
+CREATE DATABASE escola;
 
-Use escola;
+USE escola;
 
-create table aluno (
-    id int primary key auto_increment,
-    nome varchar(255) not null,
-    idade int not null    
+CREATE TABLE aluno (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome varchar(255) NOT NULL,
+    idade int NOT NULL    
 );
 CREATE TABLE curso (
-    id int PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     curso_name VARCHAR(50)
 );
 CREATE TABLE professor (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR (100)
 );
+CREATE TABLE professor_curso (
+    id_professor INT,
+    id_curso INT,
+    PRIMARY KEY (id_professor, id_curso),
+    FOREIGN KEY (id_professor) REFERENCES professor(id),
+    FOREIGN KEY (id_curso) REFERENCES curso(id)
+);
 
-Insert into aluno (nome, idade) values ('João', 20);
-Insert into aluno (nome, idade) values ('Maria', 22);  
-Insert into aluno (nome, idade) values ('Pedro', 19);
-Insert into aluno (nome, idade) values ('João1', 22);
-Insert into aluno (nome, idade) values ('Maria1', 21);  
-Insert into aluno (nome, idade) values ('Pedro1', 18);
+INSERT INTO aluno (nome, idade) VALUES ('João', 20);
+INSERT INTO aluno (nome, idade) VALUES ('Maria', 22);  
+INSERT INTO aluno (nome, idade) VALUES ('Pedro', 19);
+INSERT INTO aluno (nome, idade) VALUES ('João1', 22);
+INSERT INTO aluno (nome, idade) VALUES ('Maria1', 21);  
+INSERT INTO aluno (nome, idade) VALUES ('Pedro1', 18);
 
 INSERT INTO curso (curso_name) VALUES ('Desenvolvimento de sistemas');
 INSERT INTO curso (curso_name) VALUES ('Sistemas embarcados');    
