@@ -16,7 +16,7 @@ CREATE TABLE professor (
     nome VARCHAR (100)
 );
 
-Insert into aluno (nome, idade) values ('João, 20);
+Insert into aluno (nome, idade) values ('João', 20);
 Insert into aluno (nome, idade) values ('Maria', 22);  
 Insert into aluno (nome, idade) values ('Pedro', 19);
 Insert into aluno (nome, idade) values ('João1', 22);
