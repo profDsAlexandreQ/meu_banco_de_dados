@@ -2,11 +2,21 @@ name: CI-Aula-Pratica
 on: [push]
 
 jobs:
-  verificacao-inicial:
+  verificacao-sql:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Simular Teste
-        run: echo "Executando testes automatizados..."
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar Corretor de SQL (Linter)
+        run: pip install sqlfluff
+
+      - name: Validar Sintaxe do SQL
+        # Esse comando vai analisar seus arquivos .sql
+        # Se houver erro de vírgula, parênteses ou sintaxe, ele vai falhar.
+        run: sqlfluff lint --dialect mysql .
